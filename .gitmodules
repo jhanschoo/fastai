@@ -1,0 +1,6 @@
+[submodule "course22"]
+	path = course22
+	url = git@github.com:jhanschoo/course22.git
+[submodule "fastbook"]
+	path = fastbook
+	url = git@github.com:jhanschoo/fastbook.git
