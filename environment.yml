@@ -1,0 +1,23 @@
+name: fastai
+channels:
+  - fastchan
+  - pytorch
+  - nvidia
+  - defaults
+dependencies:
+  - python=3.11
+  - fastchan::fastai
+  - fastchan::fastbook
+  - pytorch::pytorch-mutex=*=cuda
+  - pytorch::pytorch
+  - pytorch::torchvision
+  - pytorch::torchaudio
+  - anaconda
+  - pip
+  - sentencepiece
+  - treeinterpreter
+  - pip:
+    - duckduckgo_search
+    - kaggle
+    - waterfallcharts
+    - dtreeviz
