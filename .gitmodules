@@ -4,3 +4,6 @@
 [submodule "fastbook"]
 	path = fastbook
 	url = git@github.com:jhanschoo/fastbook.git
+[submodule "course22p2"]
+	path = course22p2
+	url = git@github.com:jhanschoo/course22p2.git
