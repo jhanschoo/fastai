@@ -1,0 +1,81 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fai"
+dynamic = ["version"]
+description = ''
+readme = "README.md"
+requires-python = ">=3.12"
+keywords = []
+authors = [
+  { name = "Johannes Choo", email = "jhanschoo@gmail.com" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.12",
+]
+dependencies = []
+[project.optional-dependencies]
+jupyter = [
+  "jupyter",
+]
+pytorch = [
+  "torch>=2.6.0",
+  "torchvision",
+  "torchaudio",
+]
+fastai = [
+  "fastai >= 2.7.19",
+]
+fastbook = [
+  "fastbook",
+  "kaggle",
+  "dtreeviz",
+  "graphviz",
+  "treeinterpreter",
+  "waterfallcharts"
+]
+scicore = [
+  "numpy",
+  "matplotlib",
+  "pandas",
+  "scikit-learn"
+]
+
+[tool.hatch.version]
+path = "src/fai/__about__.py"
+
+[tool.hatch.envs.fastbook]
+features = ["scicore", "jupyter", "fastai", "fastbook"]
+
+[tool.hatch.envs.course22p2]
+features = ["scicore", "jupyter", "fastai"]
+
+[tool.hatch.envs.types]
+extra-dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/fai tests}"
+
+[tool.coverage.run]
+source_pkgs = ["fai", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/fai/__about__.py",
+]
+
+[tool.coverage.paths]
+fai = ["src/fai", "*/fai/src/fai"]
+tests = ["tests", "*/fai/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]

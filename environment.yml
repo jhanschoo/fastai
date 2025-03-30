@@ -1,42 +1,46 @@
 name: fastai
 channels:
-  - pytorch
   - nvidia
   - conda-forge
+  - pytorch
   - fastai
   - defaults
 dependencies:
   - fastai::fastai>=2.7.15
   - fastai::fastbook>=0.0.28
-  - fastai::fastcore>=1.5.33
+  - fastai::fastcore>=1.7.20
   - fastai::fastkaggle>=0.0.8
   - fastai::fastprogress>=1.0.3
   - pytorch::pytorch-mutex=*=cuda
-  - pytorch::pytorch>=2.3.0
-  - pytorch::torchvision>=0.18.0
-  - pytorch::torchaudio>=2.3.0
-  - anaconda
-  - anaconda-navigator
+  - pytorch::pytorch>=2.4.0
+  - pytorch::torchvision>=0.20.0
+  - pytorch::torchaudio>=2.5.0
   - datasets
   - diffusers
   - dtreeviz
   - einops
-  - kaggle
+  - evaluate
+  - ffmpeg
   - gradio
   - graphviz
   - ipywidgets
   - jupyterlab
+  - kaggle
   - matplotlib
   - nbdev
   - pandas
+  - pingouin
   - pip
   - plotly
   - python=3.12
+  - pysoundfile
+  - recordlinkage
   - scikit-learn
   - seaborn
   - sentencepiece
   - statsmodels
   - timm
+  - tiktoken
   - transformers
   - treeinterpreter
   - waterfallcharts

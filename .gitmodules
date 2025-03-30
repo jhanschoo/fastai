@@ -1,9 +1,9 @@
 [submodule "course22"]
-	path = course22
+	path = src/fai/course22
 	url = git@github.com:jhanschoo/course22.git
 [submodule "fastbook"]
-	path = fastbook
+	path = src/fai/fastbook
 	url = git@github.com:jhanschoo/fastbook.git
 [submodule "course22p2"]
-	path = course22p2
+	path = src/fai/course22p2
 	url = git@github.com:jhanschoo/course22p2.git
